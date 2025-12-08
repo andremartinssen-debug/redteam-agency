@@ -6,6 +6,7 @@
     <title>HamburgSecurity</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -16,7 +17,7 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li class="dropdown">
-                        <a href="#services" class="dropbtn">Services</a>
+                        <a href="#services" class="dropbtn">Services <i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-content">
                             <a href="#redteam">Red Team Assessments</a>
                             <a href="#pentest">Penetration Testing</a>
@@ -43,14 +44,17 @@
         <h2>Unsere Leistungen</h2>
         <div class="services-grid">
             <div class="service" id="redteam">
+                <i class="fas fa-shield-alt service-icon"></i>
                 <h3>Red Team Assessments</h3>
                 <p>Simulierte Angriffe auf Ihre IT- und Sicherheitsinfrastruktur zur Identifikation von Schwachstellen.</p>
             </div>
             <div class="service" id="pentest">
+                <i class="fas fa-network-wired service-icon"></i>
                 <h3>Penetration Testing</h3>
                 <p>Geprüfte, praxisnahe Tests Ihrer Netzwerke, Webanwendungen und physischen Sicherheitsmaßnahmen.</p>
             </div>
             <div class="service" id="consulting">
+                <i class="fas fa-user-tie service-icon"></i>
                 <h3>Security Consulting</h3>
                 <p>Beratung zu Sicherheitsstrategien, Richtlinien und Schulungen für Mitarbeiter und IT-Teams.</p>
             </div>
