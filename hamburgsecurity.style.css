@@ -1,82 +1,130 @@
-css style.css/* Grundlegendes Reset */
-* { margin:0; padding:0; box-sizing:border-box; }
-
+/* Grundlegendes Styling */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-  line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #ffffff;
 }
 
-.container { width: 90%; max-width: 1200px; margin: auto; }
-
-/* HEADER */
+/* Header */
 header {
-  background-color: #111;
-  padding: 15px 0;
-  position: sticky;
-  top:0;
-  z-index:1000;
+    background-color: #001f3f;
+    padding: 20px;
+    text-align: center;
 }
 
-header .logo img { height: 50px; }
-
-nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: flex-end;
+header .logo {
+    max-width: 180px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
-nav ul li { margin-left: 30px; }
-
-nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
+header nav a {
+    color: #00aaff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-nav ul li a:hover { color: #1e90ff; }
-
-/* HERO */
-#hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 80vh;
-  background: #1a1a1a url('https://images.unsplash.com/photo-1556741533-f6acd647d2fb?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
+header nav a:hover {
+    color: #0077aa;
 }
 
-#hero h1 { font-size: 3em; margin-bottom: 20px; color: #1e90ff; }
-#hero p { font-size: 1.2em; margin-bottom: 30px; }
-.btn {
-  text-decoration: none;
-  background-color: #1e90ff;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 5px;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #001f3f;
 }
 
-/* SERVICES */
-#services { padding: 60px 0; }
-#services h2 { text-align:center; margin-bottom:40px; color:#1e90ff; }
-.service-grid { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
-.service-item { background:#1f1f1f; padding:30px; border-radius:10px; width:300px; text-align:center; }
-.service-item h3 { margin-top:15px; margin-bottom:10px; color:#1e90ff; }
-.service-item p { font-size:0.95em; }
-
-/* CONTACT */
-#contact { padding:60px 0; background:#111; text-align:center; }
-#contact a { color:#1e90ff; text-decoration:none; }
-#contact a:hover { text-decoration:underline; }
-
-/* FOOTER */
-footer { text-align:center; padding:20px 0; background:#0d0d0d; font-size:0.9em; }
-
-/* Mobile responsive */
-@media(max-width:768px){
-  nav ul { flex-direction:column; align-items:center; }
-  nav ul li { margin:10px 0; }
-  .service-grid { flex-direction:column; align-items:center; }
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #00aaff;
 }
 
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #0077aa;
+}
+
+/* Services */
+#services {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00aaff;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service {
+    background-color: #111111;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    max-width: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.service h3 {
+    margin-top: 0;
+    color: #00aaff;
+}
+
+/* Contact */
+#contact {
+    padding: 60px 20px;
+    background-color: #001f3f;
+    text-align: center;
+}
+
+#contact a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #0077aa;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #888888;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
