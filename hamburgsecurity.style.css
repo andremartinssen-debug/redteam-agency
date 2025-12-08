@@ -1,41 +1,91 @@
-/* Grundlegendes Styling */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Grundlegendes Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #001f3f; /* dunkles Blau */
     color: #ffffff;
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #001f3f;
-    padding: 20px;
-    text-align: center;
+    background-color: #002a5c;
+    padding: 20px 0;
+}
+
+header .header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 header .logo {
     max-width: 180px;
-    display: block;
-    margin: 0 auto 10px auto;
 }
 
-header nav a {
+/* Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
     color: #00aaff;
-    margin: 0 15px;
     text-decoration: none;
+    margin-left: 20px;
     font-weight: 700;
+    padding: 5px 0;
 }
 
-header nav a:hover {
-    color: #0077aa;
+.nav-links a:hover {
+    color: #00ffff;
 }
 
-/* Hero Section */
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003366;
+    min-width: 200px;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #00aaff;
+}
+
+.dropdown-content a:hover {
+    background-color: #004080;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background-color: #001f3f;
+    background: linear-gradient(135deg, #002a5c, #001f3f);
 }
 
 .hero h1 {
@@ -72,7 +122,7 @@ header nav a:hover {
 #services h2 {
     text-align: center;
     margin-bottom: 40px;
-    color: #00aaff;
+    color: #00ffff;
 }
 
 .services-grid {
@@ -83,7 +133,7 @@ header nav a:hover {
 }
 
 .service {
-    background-color: #111111;
+    background-color: #003366;
     padding: 30px;
     border-radius: 10px;
     flex: 1 1 300px;
@@ -99,7 +149,7 @@ header nav a:hover {
 /* Contact */
 #contact {
     padding: 60px 20px;
-    background-color: #001f3f;
+    background-color: #002a5c;
     text-align: center;
 }
 
@@ -109,12 +159,12 @@ header nav a:hover {
 }
 
 #contact a:hover {
-    color: #0077aa;
+    color: #00ffff;
 }
 
 /* Footer */
 footer {
-    background-color: #000000;
+    background-color: #001f3f;
     padding: 20px;
     text-align: center;
     font-size: 0.9em;
@@ -126,5 +176,18 @@ footer {
     .services-grid {
         flex-direction: column;
         align-items: center;
+    }
+
+    header .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
     }
 }
