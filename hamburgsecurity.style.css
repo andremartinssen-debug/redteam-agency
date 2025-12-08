@@ -1,4 +1,4 @@
-/* Grundlegendes Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@
 /* Body */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #001f3f; /* dunkles Blau */
-    color: #ffffff;
+    background-color: #001f3f;
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -139,11 +139,17 @@ header .logo {
     flex: 1 1 300px;
     max-width: 350px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
 }
 
 .service h3 {
-    margin-top: 0;
+    margin-top: 15px;
     color: #00aaff;
+}
+
+.service-icon {
+    font-size: 50px;
+    color: #00ffff;
 }
 
 /* Contact */
