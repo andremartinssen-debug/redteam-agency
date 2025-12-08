@@ -3,75 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HamburgSecurity</title>
+    <title>HamburgSecurity – Red Team & Penetration Testing</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <img src="fertigsecurity.png" alt="HamburgSecurity Logo" class="logo">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#services" class="dropbtn">Services <i class="fas fa-caret-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#redteam">Red Team Assessments</a>
-                            <a href="#pentest">Penetration Testing</a>
-                            <a href="#consulting">Security Consulting</a>
-                        </div>
-                    </li>
-                    <li><a href="#contact">Kontakt</a></li>
-                </ul>
-            </nav>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+    <div class="logo">HamburgSecurity</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Leistungen</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Professionelle Red Team Assessments</h1>
+        <p>Wir testen physische und digitale Sicherheitssysteme – realistisch, legal, hochprofessionell.</p>
+        <a href="#contact" class="cta-btn">Jetzt Kontakt aufnehmen</a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+    <h2>Unsere Leistungen</h2>
+
+    <div class="services-grid">
+
+        <div class="service-box">
+            <i class="fas fa-user-secret"></i>
+            <h3>Red Teaming</h3>
+            <p>Realistische Angriffe auf Systeme, Prozesse und Gebäude – wie echte Angreifer.</p>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>HamburgSecurity</h1>
-            <p>Professionelle Red Team & Security Assessments für Unternehmen in Hamburg.</p>
-            <a href="#contact" class="btn">Jetzt Kontakt aufnehmen</a>
+        <div class="service-box">
+            <i class="fas fa-bug"></i>
+            <h3>Penetration Tests</h3>
+            <p>Systematische Tests von Web, Infrastruktur, API, Cloud und physischem Zugang.</p>
         </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Unsere Leistungen</h2>
-        <div class="services-grid">
-            <div class="service" id="redteam">
-                <i class="fas fa-shield-alt service-icon"></i>
-                <h3>Red Team Assessments</h3>
-                <p>Simulierte Angriffe auf Ihre IT- und Sicherheitsinfrastruktur zur Identifikation von Schwachstellen.</p>
-            </div>
-            <div class="service" id="pentest">
-                <i class="fas fa-network-wired service-icon"></i>
-                <h3>Penetration Testing</h3>
-                <p>Geprüfte, praxisnahe Tests Ihrer Netzwerke, Webanwendungen und physischen Sicherheitsmaßnahmen.</p>
-            </div>
-            <div class="service" id="consulting">
-                <i class="fas fa-user-tie service-icon"></i>
-                <h3>Security Consulting</h3>
-                <p>Beratung zu Sicherheitsstrategien, Richtlinien und Schulungen für Mitarbeiter und IT-Teams.</p>
-            </div>
+        <div class="service-box">
+            <i class="fas fa-shield-halved"></i>
+            <h3>Sicherheitsanalyse</h3>
+            <p>Wir identifizieren Schwachstellen und liefern klare Maßnahmen für maximale Sicherheit.</p>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Schreiben Sie uns eine E-Mail oder rufen Sie direkt an:</p>
-        <p>Email: <a href="mailto:alexander.dehns@gmail.com">alexander.dehns@gmail.com</a></p>
-        <p>Telefon: <a href="tel:+4915750292586">+49 15750292586</a></p>
-    </section>
+        <div class="service-box">
+            <i class="fas fa-building-lock"></i>
+            <h3>Physische Sicherheitsprüfung</h3>
+            <p>Einbruchtests, Social Engineering, Zutrittsversuche – alles legal & schriftlich autorisiert.</p>
+        </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 HamburgSecurity. Alle Rechte vorbehalten.</p>
-    </footer>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+    <h2>Kontakt</h2>
+    <p>Schreiben Sie uns oder rufen Sie direkt an:</p>
+
+    <div class="contact-box">
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> alexander.dehns@gmail.com</p>
+        <p><i class="fas fa-phone"></i> <strong>Telefon:</strong> +49 15750292586</p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 HamburgSecurity – Red Team & Penetration Testing
+</footer>
+
 </body>
 </html>
