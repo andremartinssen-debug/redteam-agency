@@ -6,18 +6,17 @@
 <title>Physische Sicherheit – HamburgSecurity</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>
-    /* Gleicher Style wie index.html – alles drin */
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Inter',sans-serif;background:#0a0a0f;color:#e0e0e0;line-height:1.8;}
     header{position:fixed;top:0;width:100%;background:rgba(10,10,15,0.98);backdrop-filter:blur(12px);
         padding:18px 40px;display:flex;justify-content:flex-start;align-items:center;z-index:1000;
         border-bottom:1px solid #300000;}
-    header img{height:80px;}
+    header img{height:80px;margin-right:auto;}
     nav{margin-left:auto;}
     nav a{color:#e0e0e0;margin:0 20px;font-weight:600;transition:0.3s;}
     nav a:hover{color:#ff3333;}
     .hero{height:80vh;background:linear-gradient(rgba(10,10,15,0.88),rgba(20,0,0,0.85)),
-        url('https://images.unsplash.com/photo-1581092160607-36f4e6a3e563?q=80&w=2400') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=2400') center/cover no-repeat;
         display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
     .hero h1{font-size:4.5rem;font-weight:900;color:#fff;margin-bottom:20px;text-shadow:0 0 40px rgba(255,51,51,0.4);}
     .hero p{font-size:1.6rem;max-width:900px;margin:30px auto;opacity:0.95;}
@@ -25,11 +24,11 @@
     .content h2{font-size:2.8rem;margin:50px 0 30px;color:#ff3333;}
     .content ul{padding-left:30px;margin:30px 0;}
     .content ul li{margin:18px 0;font-size:1.2rem;position:relative;}
-    .content ul li::before{content:"›";color:#ff3333;position:absolute;left:-25px;font-weight:bold;}
+    .content ul li::before{content:"▹";color:#ff3333;position:absolute;left:-30px;font-weight:bold;}
     footer{background:#0a0a0f;padding:100px 40px;text-align:center;border-top:3px solid #300000;}
     footer a{color:#ff3333;font-size:1.4rem;}
-    @media(max-width:992px){.hero h1{font-size:3.5rem;}.content{padding-top:100px;}}
-    @media(max-width:576px){.hero h1{font-size:2.8rem;}.content{padding:80px 20px;}}
+    @media(max-width:992px){.hero h1{font-size:3.5rem;}.content{padding-top:100px;padding-left:20px;padding-right:20px;}}
+    @media(max-width:576px){.hero h1{font-size:2.8rem;}.content{padding:80px 20px;font-size:1rem;}}
 </style>
 </head>
 <body>
@@ -48,11 +47,12 @@
 
 <section class="hero">
     <h1>Physische Sicherheit</h1>
-    <p>Wir testen, wie leicht jemand in Ihr Gebäude kommt – und wie schwer es für ihn sein sollte.</p>
+    <p>Einbruchtests, Tailgating, Social Engineering – wir zeigen, wie leicht jemand reinkommt.</p>
 </section>
 
 <div class="content">
     <h2>Was wir prüfen</h2>
+    <p>Unsere Tests umfassen alle relevanten Bereiche der physischen Sicherheit:</p>
     <ul>
         <li>Zutrittskontrollen (Badge, NFC, Biometrie, Schlüssel)</li>
         <li>Tailgating & Piggybacking an Eingängen</li>
@@ -63,11 +63,12 @@
     </ul>
 
     <h2>Häufig gefundene Schwachstellen</h2>
+    <p>In 95 % unserer Tests finden wir kritische Lücken wie:</p>
     <ul>
-        <li>Mitarbeiter halten Türen für „Kollegen“ auf</li>
+        <li>Mitarbeiter halten Türen für „Kollegen" auf</li>
         <li>Ungesicherte Nebeneingänge oder offene Fenster</li>
         <li>Alarmanlagen nicht scharf oder falsch konfiguriert</li>
-        <li>Fehlende Schulung des Sicherheitspersonals</li>
+        <li>Fehlende oder schlecht geschulte Sicherheitskräfte</li>
         <li>Provisorische Zugangslösungen (z. B. Keile in Türen)</li>
     </ul>
 
