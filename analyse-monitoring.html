@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analyse & Monitoring – HamburgSecurity</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Inter',sans-serif;background:#0a0a0f;color:#e0e0e0;line-height:1.8;}
+    header{position:fixed;top:0;width:100%;background:rgba(10,10,15,0.98);backdrop-filter:blur(12px);
+        padding:18px 40px;display:flex;justify-content:flex-start;align-items:center;z-index:1000;
+        border-bottom:1px solid #300000;}
+    header img{height:80px;margin-right:auto;}
+    nav{margin-left:auto;}
+    nav a{color:#e0e0e0;margin:0 20px;font-weight:600;transition:0.3s;}
+    nav a:hover{color:#ff3333;}
+    .hero{height:80vh;background:linear-gradient(rgba(10,10,15,0.88),rgba(20,0,0,0.85)),
+        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2400') center/cover no-repeat;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+    .hero h1{font-size:4.5rem;font-weight:900;color:#fff;margin-bottom:20px;text-shadow:0 0 40px rgba(255,51,51,0.4);}
+    .hero p{font-size:1.6rem;max-width:900px;margin:30px auto;opacity:0.95;}
+    .content{padding:140px 60px 100px;max-width:1100px;margin:auto;}
+    .content h2{font-size:2.8rem;margin:50px 0 30px;color:#ff3333;}
+    .content ul{padding-left:30px;margin:30px 0;}
+    .content ul li{margin:18px 0;font-size:1.2rem;position:relative;}
+    .content ul li::before{content:"▹";color:#ff3333;position:absolute;left:-30px;font-weight:bold;}
+    footer{background:#0a0a0f;padding:100px 40px;text-align:center;border-top:3px solid #300000;}
+    footer a{color:#ff3333;font-size:1.4rem;}
+    @media(max-width:992px){.hero h1{font-size:3.5rem;}.content{padding-top:100px;padding-left:20px;padding-right:20px;}}
+    @media(max-width:576px){.hero h1{font-size:2.8rem;}.content{padding:80px 20px;font-size:1rem;}}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="HamburgSecurity">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="physische-sicherheit.html">Physische Sicherheit</a>
+        <a href="penetration-testing.html">Penetration Testing</a>
+        <a href="analyse-monitoring.html">Analyse & Monitoring</a>
+        <a href="red-team.html">Red Team</a>
+        <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Analyse & Monitoring</h1>
+    <p>Wir machen Ihre Sicherheitslage transparent – rund um die Uhr.</p>
+</section>
+
+<div class="content">
+    <h2>Unsere Leistungen</h2>
+    <ul>
+        <li>Kontinuierliches Schwachstellen-Monitoring Ihrer externen Angriffsfläche</li>
+        <li>Darknet- und Leak-Überwachung (Credentials, Datenbanken, Quellcode)</li>
+        <li>Log-Analyse und Anomalie-Erkennung</li>
+        <li>Monatliche Sicherheitsberichte mit klaren Handlungsempfehlungen</li>
+        <li>Frühwarnsystem für neue CVEs, die Ihr Unternehmen betreffen</li>
+    </ul>
+    <h2>Typische Erkenntnisse</h2>
+    <ul>
+        <li>Gestohlene Zugangsdaten im Darknet</li>
+        <li>Exponierte Backups oder Datenbanken</li>
+        <li>Fehlende Patches trotz kritischer CVEs</li>
+        <li>Schatten-IT und unbekannte Cloud-Dienste</li>
+    </ul>
+</div>
+
+<footer>
+    <p style="font-size:1.6rem;">
+        <strong>Kontakt – unverbindlich</strong><br><br>
+        Alexander Dehns • <a href="mailto:alexander.dehns@gmail.com">alexander.dehns@gmail.com</a> • +49 157 50292586
+    </p>
+</footer>
+
+</body>
+</html>
