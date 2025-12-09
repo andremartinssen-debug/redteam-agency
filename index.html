@@ -3,245 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HamburgSecurity – Red Team & Penetration Testing</title>
+    <title>HamburgSecurity – Red Team & Penetration Testing Hamburg</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * {margin:0;padding:0;box-sizing:border-box;}
-        body {
-            font-family:'Inter',sans-serif;
-            background:#000000;
-            color:#d0d0d0;
-            line-height:1.7;
-            overflow-x:hidden;
-        }
+        body {font-family:'Inter',sans-serif;background:#0a0a0f;color:#d4d4d4;line-height:1.8;overflow-x:hidden;}
         header {
-            position:fixed;
-            top:0;
-            width:100%;
-            background:rgba(0,0,0,0.95);
-            backdrop-filter:blur(15px);
-            padding:25px 50px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            z-index:1000;
-            border-bottom:1px solid #200000;
+            position:fixed;top:0;width:100%;background:rgba(10,10,15,0.98);backdrop-filter:blur(15px);
+            padding:20px 60px;display:flex;justify-content:space-between;align-items:center;z-index:1000;
+            border-bottom:1px solid #330000;
         }
-        header img {
-            height:80px;
-            filter:drop-shadow(0 0 10px rgba(220,0,0,0.4));
-        }
-        nav a {
-            color:#e0e0e0;
-            margin-left:40px;
-            font-weight:600;
-            font-size:1.1rem;
-            transition:0.4s;
-            position:relative;
-        }
-        nav a:hover {
-            color:#ff1a1a;
-            text-shadow:0 0 15px rgba(255,26,26,0.6);
-        }
-        nav a::after {
-            content:'';
-            position:absolute;
-            width:0;
-            height:2px;
-            bottom:-8px;
-            left:0;
-            background:#ff1a1a;
-            transition:0.4s;
-        }
+        header img {height:75px;filter:drop-shadow(0 0 15px rgba(200,0,0,0.5));}
+        nav a {color:#e0e0e0;margin-left:40px;font-weight:600;font-size:1.1rem;transition:0.4s;position:relative;}
+        nav a:hover {color:#ff1a1a;}
+        nav a::after {content:'';position:absolute;width:0;height:3px;bottom:-10px;left:0;background:#ff1a1a;transition:0.4s;}
         nav a:hover::after {width:100%;}
 
         .hero {
-            height:100vh;
-            background:linear-gradient(rgba(0,0,0,0.85),rgba(15,0,0,0.7)),url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2400&fm=jpg') center/cover no-repeat;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-            position:relative;
+            height:100vh;background:linear-gradient(rgba(10,10,15,0.9),rgba(20,0,0,0.8)),url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2400&fm=jpg') center/cover no-repeat;
+            display:flex;align-items:center;justify-content:center;text-align:center;position:relative;
         }
-        .hero::before {
-            content:"";
-            position:absolute;
-            inset:0;
-            background:radial-gradient(circle at center,rgba(139,0,0,0.15),transparent 70%);
-        }
-        .hero-content {
-            position:relative;
-            z-index:2;
-            max-width:900px;
-            padding:30px;
-        }
-        .hero h1 {
-            font-size:5.5rem;
-            font-weight:900;
-            letter-spacing:3px;
-            color:#ffffff;
-            margin-bottom:30px;
-            text-shadow:0 0 40px rgba(255,26,26,0.5);
-        }
-        .hero p {
-            font-size:1.6rem;
-            margin-bottom:50px;
-            opacity:0.95;
-            max-width:800px;
-            margin-left:auto;
-            margin-right:auto;
-        }
-        .btn {
-            background:#8B0000;
-            color:#ffffff;
-            padding:20px 50px;
-            border-radius:10px;
-            font-weight:bold;
-            font-size:1.3rem;
-            transition:0.5s;
-            box-shadow:0 0 30px rgba(139,0,0,0.7);
-            display:inline-block;
-        }
-        .btn:hover {
-            background:#B22222;
-            box-shadow:0 0 50px rgba(178,34,34,0.9);
-            transform:scale(1.08);
-        }
+        .hero::before {content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(139,0,0,0.25),transparent 70%);}
+        .hero-content {position:relative;z-index:2;max-width:1000px;padding:40px;}
+        .hero h1 {font-size:5.5rem;font-weight:900;letter-spacing:4px;color:#ffffff;margin-bottom:30px;text-shadow:0 0 50px rgba(255,26,26,0.6);}
+        .hero p {font-size:1.7rem;max-width:900px;margin:0 auto 50px;opacity:0.95;}
+        .btn {background:#8B0000;color:#ffffff;padding:20px 55px;border-radius:12px;font-weight:bold;font-size:1.3rem;transition:0.5s;box-shadow:0 0 40px rgba(139,0,0,0.8);}
+        .btn:hover {background:#B22222;box-shadow:0 0 60px rgba(178,34,34,1);transform:scale(1.08);}
 
-        .services {
-            padding:120px 60px;
-            background:#050000;
-        }
-        .services h2 {
-            text-align:center;
-            font-size:3.5rem;
-            margin-bottom:100px;
-            color:#ff3333;
-            text-shadow:0 0 20px rgba(255,51,51,0.3);
-        }
-        .grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
-            gap:50px;
-            max-width:1600px;
-            margin:auto;
-        }
-        .card {
-            background:#0f0000;
-            border-radius:20px;
-            overflow:hidden;
-            border:1px solid #200000;
-            transition:0.6s ease;
-            box-shadow:0 15px 40px rgba(0,0,0,0.9);
-        }
-        .card:hover {
-            border-color:#ff1a1a;
-            box-shadow:0 25px 60px rgba(255,26,26,0.25);
-            transform:translateY(-20px);
-        }
-        .card img {
-            width:100%;
-            height:280px;
-            object-fit:cover;
-            filter:brightness(0.75);
-            transition:0.6s;
-        }
-        .card:hover img {filter:brightness(0.95);}
-        .card-body {
-            padding:40px;
-        }
-        .card h3 {
-            font-size:2rem;
-            margin-bottom:25px;
-            color:#ff3333;
-        }
-        .card p {
-            font-size:1.1rem;
-            opacity:0.9;
-        }
+        section {padding:120px 60px;}
+        h2 {font-size:3.5rem;text-align:center;margin-bottom:80px;color:#ff3333;text-shadow:0 0 30px rgba(255,51,51,0.3);}
+        .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:50px;max-width:1600px;margin:auto;}
+        .card {background:#110000;border-radius:20px;overflow:hidden;border:1px solid #220000;transition:0.6s;box-shadow:0 15px 40px rgba(0,0,0,0.9);}
+        .card:hover {border-color:#ff1a1a;box-shadow:0 30px 70px rgba(255,26,26,0.3);transform:translateY(-20px);}
+        .card img {width:100%;height:300px;object-fit:cover;filter:brightness(0.7);transition:0.6s;}
+        .card:hover img {filter:brightness(1);}
+        .card-body {padding:45px;}
+        .card h3 {font-size:2.2rem;margin-bottom:25px;color:#ff3333;}
+        .card p {font-size:1.15rem;opacity:0.9;}
 
-        footer {
-            background:#000000;
-            padding:80px 40px;
-            text-align:center;
-            border-top:2px solid #200000;
-        }
-        footer a {color:#ff3333;}
+        #kontakt {background:#0a0a0f;padding:100px 60px;text-align:center;}
+        #kontakt p {font-size:1.4rem;margin:30px 0;}
+        #kontakt a {color:#ff3333;font-size:1.5rem;}
 
-        @media(max-width:768px) {
-            .hero h1 {font-size:3.2rem;}
+        @media(max-width:992px) {
+            .hero h1 {font-size:4rem;}
             header {padding:20px;flex-direction:column;gap:20px;}
-            nav a {margin:0 15px;}
-            .services {padding:80px 20px;}
+            nav a {margin:0 20px;}
+            section {padding:80px 30px;}
             .grid {gap:40px;}
+        }
+        @media(max-width:576px) {
+            .hero h1 {font-size:2.8rem;}
+            .hero p {font-size:1.3rem;}
+            .card-body {padding:30px;}
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="fertigsecurity.png" alt="HamburgSecurity">
+    <img src="logo.png" alt="HamburgSecurity">
     <nav>
-        <a href="index.html">Home</a>
-        <a href="physische-sicherheit.html">Physische Sicherheit</a>
-        <a href="penetration-testing.html">Penetration Testing</a>
-        <a href="analyse-monitoring.html">Analyse & Monitoring</a>
-        <a href="red-team.html">Red Team</a>
+        <a href="#home">Home</a>
+        <a href="#physisch">Physische Sicherheit</a>
+        <a href="#pentest">Penetration Testing</a>
+        <a href="#analyse">Analyse & Monitoring</a>
+        <a href="#redteam">Red Team</a>
         <a href="#kontakt">Kontakt</a>
     </nav>
 </header>
 
-<section class="hero">
+<section id="home" class="hero">
     <div class="hero-content">
         <h1>HAMBURGSECURITY</h1>
-        <p>Wir testen Ihre Sicherheit so realistisch, als wären wir Ihre Gegner.<br>Physisch. Digital. Ohne Kompromisse.</p>
-        <a href="#kontakt" class="btn">Jetzt unverbindlich anfragen</a>
+        <p>Wir testen Ihre Sicherheit so, wie echte Angreifer es tun würden – physisch, digital und kombiniert. Seriös. Realistisch. Ohne Kompromisse.</p>
+        <a href="#kontakt" class="btn">Unverbindlich anfragen</a>
     </div>
 </section>
 
-<div class="services">
+<section id="leistungen">
     <h2>Unsere Leistungen</h2>
     <div class="grid">
-        <a href="physische-sicherheit.html" class="card">
+        <div id="physisch" class="card">
             <img src="https://images.unsplash.com/photo-1581092160607-36f4e6a3e563?w=1200" alt="Physische Sicherheit">
             <div class="card-body">
                 <h3>Physische Sicherheit</h3>
-                <p>Einbruchtests, Tailgating, Social Engineering – wir zeigen Ihnen, wie leicht (oder schwer) jemand in Ihr Gebäude kommt.</p>
+                <p>Einbruchtests, Tailgating, Badge-Cloning, Social Engineering an Rezeption und Sicherheitsdienst – wir zeigen Ihnen, wie leicht jemand in Ihr Gebäude kommt.</p>
             </div>
-        </a>
-        <a href="penetration-testing.html" class="card">
+        </div>
+        <div id="pentest" class="card">
             <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200" alt="Penetration Testing">
             <div class="card-body">
                 <h3>Penetration Testing</h3>
-                <p>Web, Netzwerk, Cloud, API – wir finden jede Schwachstelle, bevor echte Angreifer sie ausnutzen.</p>
+                <p>Web, Netzwerk, Cloud, API, Mobile – wir finden jede Schwachstelle, bevor echte Angreifer sie ausnutzen. OWASP, PTES, OSSTMM.</p>
             </div>
-        </a>
-        <a href="analyse-monitoring.html" class="card">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200" alt="Analyse">
+        </div>
+        <div id="analyse" class="card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200" alt="Analyse & Monitoring">
             <div class="card-body">
                 <h3>Analyse & Monitoring</h3>
-                <p>Transparenz über Risiken, kontinuierliche Überwachung, Darknet-Checks – wir sehen, was andere übersehen.</p>
+                <p>Risiken erkennen, Angriffspfade verstehen, Darknet-Checks, Log-Analyse – wir machen Ihre Sicherheitslage transparent.</p>
             </div>
-        </a>
-        <a href="red-team.html" class="card">
+        </div>
+        <div id="redteam" class="card">
             <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=1200" alt="Red Team">
             <div class="card-body">
                 <h3>Red Team</h3>
-                <p>Der ultimative Test: Wir greifen Ihr Unternehmen an wie ein echter Gegner – kombiniert physisch und digital.</p>
+                <p>Der ultimative Test: Wir greifen an wie ein echter APT – kombiniert physisch, digital und menschlich. Der härteste Check, den es gibt.</p>
             </div>
-        </a>
+        </div>
     </div>
-</div>
+</section>
 
-<footer id="kontakt">
-    <p style="font-size:1.4rem;margin-bottom:20px;"><strong>Kontaktieren Sie uns unverbindlich</strong></p>
-    <p style="font-size:1.2rem;">
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Schreiben Sie mir oder rufen Sie an – das Erstgespräch ist immer kostenlos und unverbindlich.</p>
+    <p style="font-size:1.6rem;margin:50px 0;">
         Alexander Dehns<br>
         <a href="mailto:alexander.dehns@gmail.com">alexander.dehns@gmail.com</a><br>
-        +49 157 50292586
+        <a href="tel:+4915750292586">+49 157 50292586</a>
     </p>
-    <p style="margin-top:50px;opacity:0.7;">© 2025 HamburgSecurity – Professionelle Sicherheitsprüfungen</p>
+    <a href="mailto:alexander.dehns@gmail.com" class="btn">Jetzt Nachricht schreiben</a>
+</section>
+
+</body>
+</html>
 </footer>
 
 </body>
