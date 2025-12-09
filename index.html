@@ -1,80 +1,56 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security Agency</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0c0c0c;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
-    header {
-      padding: 40px;
-      text-align: center;
-      font-size: 32px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      padding: 40px;
-    }
-    .card {
-      background: #161616;
-      border-radius: 12px;
-      padding: 30px;
-      text-align: center;
-      border: 1px solid #222;
-      transition: 0.25s;
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      background: #1e1e1e;
-      border-color: #333;
-    }
-    .card h2 {
-      margin-top: 0;
-      font-size: 22px;
-      font-weight: bold;
-    }
-    .card p {
-      color: #bbb;
-      font-size: 15px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HamburgSecurity – Professionelle Sicherheitsprüfungen</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>Sicherheitsdienstleistungen</header>
+<header>
+    <img src="fertigsecurity.png" alt="HamburgSecurity Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="physische-sicherheit.html">Physische Sicherheit</a>
+        <a href="penetration-testing.html">Penetration Testing</a>
+        <a href="analyse.html">Analyse</a>
+        <a href="red-team.html">Red Team</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
 
-<div class="grid">
-  <a href="physische-sicherheit.html" class="card">
-    <h2>Physische Sicherheit</h2>
-    <p>Gebäude‑ und Zugangssicherheit unter realen Bedingungen.</p>
-  </a>
+<section class="hero" style="background-image: url('hero-bg.jpg');">
+    <h1>HamburgSecurity</h1>
+    <p>Wir testen Ihre digitale und physische Sicherheit – seriös, realistisch und streng nach professionellen Standards.</p>
+</section>
 
-  <a href="penetration-testing.html" class="card">
-    <h2>Penetration Testing</h2>
-    <p>Technische Angriffe simulieren, bevor echte Angreifer zuschlagen.</p>
-  </a>
+<section class="services">
+    <a class="service-card" href="physische-sicherheit.html">
+        <h2>Physische Sicherheit</h2>
+        <p>Zutrittskontrollen, Alarmanlagen, Gebäudechecks – wir decken Schwachstellen auf.</p>
+    </a>
 
-  <a href="analyse.html" class="card">
-    <h2>Analyse & Monitoring</h2>
-    <p>Transparenz durch Analyse, Detection und Risiko‑Bewertung.</p>
-  </a>
+    <a class="service-card" href="penetration-testing.html">
+        <h2>Penetration Testing</h2>
+        <p>Systematische Sicherheitslücken Ihrer Netzwerke und Webanwendungen werden getestet.</p>
+    </a>
 
-  <a href="red-team.html" class="card">
-    <h2>Red Team</h2>
-    <p>Die realistischste Sicherheitsprüfung – kombiniert alle Angriffsvektoren.</p>
-  </a>
-</div>
+    <a class="service-card" href="analyse.html">
+        <h2>Analyse & Monitoring</h2>
+        <p>Transparente Auswertung aller Risiken, Vorfälle und Angriffspfade in Ihrem Unternehmen.</p>
+    </a>
+
+    <a class="service-card" href="red-team.html">
+        <h2>Red Team</h2>
+        <p>Simulierte Angriffe auf Mensch, Technik und Prozesse – kombiniert für maximalen Realismus.</p>
+    </a>
+</section>
+
+<footer id="kontakt">
+    <p>Kontakt: <a href="mailto:alexander.dehns@gmail.com">alexander.dehns@gmail.com</a> • +49 15750292586</p>
+    <p>© 2025 HamburgSecurity – Alle Rechte vorbehalten.</p>
+</footer>
 
 </body>
 </html>
